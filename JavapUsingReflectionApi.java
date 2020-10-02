@@ -192,4 +192,19 @@ import java.io.BufferedReader;
  System.out.println();
  }
  }
+  
+  /**
+ * This method is meant for listing all inner classes
+*/
+ private static void setupInnerClasses() {
+ Class[] innerClasses = cls.getNestMembers();
+ Class innerClass = null;
+
+ for (int i = 0; i < innerClasses.length; i++) {
+ innerClass = innerClasses[i];
+ System.out.print(innerClass.getName());
+ System.out.println();
+ }
+  System.out.println("}");
+ }
  }
